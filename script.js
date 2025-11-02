@@ -21,16 +21,13 @@ addButton.addEventListener("click", () => {
 
 choosebtn.addEventListener("click", () => {
     if (names.length === 0) {
-        showPopup("there is no name ");
-        return;
+        return showPopup("there is no name ");
     }
-
     const randomIndex = Math.floor(Math.random() * names.length);
     const chosenName = names[randomIndex];
+
     showPopup("Chosen name : " + chosenName);
-
     names.splice(randomIndex, 1);
-
     itemList.removeChild(itemList.children[randomIndex]);
 });
 
